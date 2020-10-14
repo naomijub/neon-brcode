@@ -4,6 +4,20 @@ Node wrapper of brcode to parse and emit [PIX BR Code](https://www.bcb.gov.br/co
 
 ## Usage
 
+1. Install rust
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+# or access https://rustup.rs/
+```
+
+2. Install neon
+```
+npm install --global neon-cli
+# OR
+yarn global add neon-cli
+```
+
+3. Install `neon-code`
 ```
 npm install neon-brcode --save
 ```
