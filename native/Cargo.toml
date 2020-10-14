@@ -1,0 +1,20 @@
+[package]
+name = "neon-brcode"
+version = "0.1.0"
+authors = ["Julia Naomi <jnboeira@outlook.com>"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "neon_brcode"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "*"
+
+[dependencies]
+neon = "*"
+brcode = "1.4.1"
+neon-serde = "*"

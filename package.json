@@ -1,0 +1,37 @@
+{
+  "name": "neon-brcode",
+  "version": "0.1.0",
+  "description": "Node wrapper for Rust lib BRCODE",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naomijub/neon-brcode"
+  },
+  "bugs": {
+    "url": "https://github.com/naomijub/neon-brcode/issues"
+  },
+  "keywords": [
+    "pix",
+    "brcode",
+    "qrcode",
+    "emv"
+  ],
+  "author": "Julia Naomi <jnboeira@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.5.0"
+  },
+  "scripts": {
+    "install": "neon build",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
+  },
+  "jest": {
+    "verbose": true
+  }
+}
