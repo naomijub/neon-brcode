@@ -10,7 +10,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # or access https://rustup.rs/
 ```
 
-2. Install neon
+2. Install [neon](https://neon-bindings.com/)
 ```
 npm install --global neon-cli
 # OR
