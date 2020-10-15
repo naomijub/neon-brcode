@@ -24,6 +24,7 @@ jobs:
     - name: build
       run: |
         npm ci
+        npx tsc
         npm install --global neon-cli
         neon build --release
     - name: test
