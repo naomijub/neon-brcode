@@ -12,3 +12,6 @@ build-release:
 
 clean:
 	neon clean
+
+docgen:
+	npm run docgen
