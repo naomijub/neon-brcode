@@ -22,6 +22,79 @@ yarn global add neon-cli
 npm install neon-brcode --save
 ```
 
+### Types and functions:
+
+```ts
+
+export interface BrCodeJson {
+    payload_version: number;
+    initiation_method?: number;
+    merchant_account_information?: string;
+    merchant_information: Array<{
+        id: number;
+        info: Array<{
+            id: number;
+            info: string;
+        }>;
+    }>;
+    merchant_category_code: number;
+    merchant_name: string;
+    merchant_city: string;
+    postal_code?: string;
+    convenience?: String;
+    convenience_fee_fixed?: String;
+    convenience_fee_percentage?: String;
+    currency: string;
+    amount?: number;
+    country_code: string;
+    field_template: Array<{ reference_label: string }>;
+    crc1610?: string;
+    templates?: Array<{
+        id: number;
+        info: Array<{
+            id: number;
+            info: string;
+        }>;
+    }>;
+}
+
+function jsonToBrcode(json: BrCodeJson): string
+function brcodeToJson(code: string): BrCodeJson
+function brcodeIsPix(code: String): boolean 
+function jsonIsPix(json: BrCodeJson): boolean
+function crc16Ccitt(message: string): string
+function getJsonTransactionId(json: BrCodeJson): String
+function getBrcodeTransactionId(code: String): String
+function getJsonAliases(json: BrCodeJson): Array<String> 
+function getBrcodeAliases(code: String): Array<String> 
+function getJsonMessages(json: BrCodeJson): Array<String>
+function getBrcodeMessages(code: String): Array<String> 
+function jsonToSvgFile(json: BrCodeJson, path: String) 
+function brcodeToSvgFile(code: String, path: String)
+function jsonToSvgString(json: BrCodeJson): String
+function brcodeToSvgString(code: String): String 
+```
+
+### Functions descriptions:
+* `jsonToBrcode(json: BrCodeJson): string`: converts a `BrCodeJson` into a BR Code String.
+* `brcodeToJson(code: string): BrCodeJson`: converts a BR Code String into a `BrCodeJson`.
+* `brcodeIsPix(code: String): boolean`: checks if BR Code String is of type Pix.
+* `jsonIsPix(json: BrCodeJson): boolean`: checks if `BrCodeJson` is of type Pix.
+* `crc16Ccitt(message: string): string`: generates a CRC16_CCITT for the inserted information.
+* `getJsonTransactionId(json: BrCodeJson): String`: returns the `transactionId` of a `BrCodeJson`.
+* `getBrcodeTransactionId(code: String): String`: returns the `transactionId` of a BR Code String.
+* `getJsonAliases(json: BrCodeJson): Array<String>`: returns all Pix aliases of a `BrCodeJson`.
+* `getBrcodeAliases(code: String): Array<String>`: returns all Pix aliases of a BR Code String.
+* `getJsonMessages(json: BrCodeJson): Array<String>`: returns all Pix messages of a `BrCodeJson`.
+* `getBrcodeMessages(code: String): Array<String>`: returns all Pix messages of a BR Code String.
+* `jsonToSvgFile(json: BrCodeJson, path: String)`: generates a SVG file at path (must end with `.svg`) for `BrCodeJson`.
+* `brcodeToSvgFile(code: String, path: String)`: generates a SVG file at path (must end with `.svg`) for BR Code String.
+* `jsonToSvgString(json: BrCodeJson): String`: generates a SVG string for `BrCodeJson`.
+* `brcodeToSvgString(code: String): String`: generates a SVG string for BR Code String.
+
+
+### Example usage
+* Test file has more usages.
 
 **Parse**
 ```js
