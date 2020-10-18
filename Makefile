@@ -4,10 +4,10 @@ test-2:
 test:
 	npm test
 
-build:
+build-npm:
 	npm install
 
-build-release:
+build:
 	neon build --release
 
 clean:
