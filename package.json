@@ -1,6 +1,6 @@
 {
   "name": "neon-brcode",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Node wrapper for Rust lib BRCODE",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
