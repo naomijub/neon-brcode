@@ -4,7 +4,7 @@ test-2:
 test:
 	npm test
 
-build-npm:
+install:
 	npm install
 
 build:

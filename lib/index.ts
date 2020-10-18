@@ -83,3 +83,11 @@ export function jsonToSvgString(json: BrCodeJson): String {
 export function brcodeToSvgString(code: String): String {
   return brcode.brcodeToSvgString(code)
 }
+
+export function jsonToSvgFile(json: BrCodeJson, path: String) {
+  brcode.jsonToSvgFile(json, path);
+}
+
+export function brcodeToSvgFile(code: String, path: String) {
+  brcode.brcodeToSvgFile(code, path);
+}

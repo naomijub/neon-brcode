@@ -54,4 +54,20 @@ export! {
     fn brcodeToSvgString(brcode: String) -> String {
         str_to_brcode(&brcode).to_svg_standard_string()
     }
+
+    fn jsonToSvgFile(json: BrCode, path: String) -> () {
+        if path.ends_with(".svg") {
+            json.to_standard_svg_file(&path);
+        } else {
+            println!("Path should end with .svg");
+        }
+    }
+
+    fn brcodeToSvgFile(brcode: String, path: String) -> () {
+        if path.ends_with(".svg") {
+            str_to_brcode(&brcode).to_standard_svg_file(&path);
+        } else {
+            println!("Path should end with .svg");
+        }
+    }
 }
