@@ -1,6 +1,6 @@
 {
   "name": "neon-brcode",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Node wrapper for Rust lib BRCODE",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "jest": "^26.4.2",
     "ts-jest": "^26.4.1",
-    "typedoc": "^0.19.2",
+    "typedoc": "^0.20.35",
     "typescript": "^4.0.3"
   },
   "jest": {

@@ -58,9 +58,9 @@ checksum = "cf1de2fe8c75bc145a2f577add951f8134889b4795d47466a54a5c846d691693"
 
 [[package]]
 name = "brcode"
-version = "1.4.1"
+version = "1.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "add48537c212a06c0d7a510b1003903df6894c5a9bd1a1c89d169d6b02177834"
+checksum = "88558b05f3ba87d682f835921cfdb8b6a0487fab44c173b77efd5bd6f802fe00"
 dependencies = [
  "edn-derive",
  "edn-rs 0.15.1",

@@ -16,5 +16,5 @@ neon-build = "*"
 
 [dependencies]
 neon = "*"
-brcode = "1.4.1"
+brcode = "1.4.2"
 neon-serde = "*"
